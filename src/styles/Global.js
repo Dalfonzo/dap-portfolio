@@ -3,6 +3,11 @@ import { css, createGlobalStyle } from "styled-components"
 // export const idk = "asdasd"
 
 export const GlobalStyle = createGlobalStyle`
+
+body {
+  font-family: "Montserrat"
+}
+
 * {
   margin: 0;
   padding: 0;
