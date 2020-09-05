@@ -21,6 +21,7 @@ export const body = css`
 export const h1 = css`
   font-size: ${fontSizes.big};
   font-weight: ${fontWeights.bold};
+  margin: 3rem 0;
 `
 
 export const h2 = css`

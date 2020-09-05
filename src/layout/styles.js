@@ -1,8 +1,16 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Sizes } from "../styles"
 
-export const Container = styled.div`
-  max-width: ${Sizes.maxWidth};
+const properties = css`
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
+`
+
+export const Wrapper = styled.div`
+  max-width: ${Sizes.maxWidth};
+  ${properties}
+`
+export const Container = styled.div`
+  max-width: ${Sizes.innerWidth};
+  ${properties}
 `

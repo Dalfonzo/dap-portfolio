@@ -5,12 +5,14 @@ import Header from "../components/header/Header"
 import "../styles/FontFaces.css"
 
 const Layout = props => (
-  <S.Container>
+  <S.Wrapper>
     <Header />
-    <GlobalStyle />
-    <GlobalType />
-    {props.children}
-  </S.Container>
+    <S.Container>
+      <GlobalStyle />
+      <GlobalType />
+      {props.children}
+    </S.Container>
+  </S.Wrapper>
 )
 
 export default Layout

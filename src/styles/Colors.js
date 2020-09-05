@@ -1,8 +1,8 @@
 /**
  * Light Theme colors
  **/
-export const blueColor = "1DA1F2"
-export const fucsiaColor = "EA4C89"
+export const blueColor = "#1DA1F2"
+export const fucsiaColor = "#EA4C89"
 
 /**
  * Light Theme colors
