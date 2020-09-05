@@ -5,7 +5,11 @@ const index = () => {
   return (
     <Layout>
       <h1>Hey, I’m David Pérez</h1>
-      <h2>--dap</h2>
+      <p>
+        I’m a informatic engineering student (currently 8th semester) living in
+        Caracas, VE. I also write some code and commit it to Github or CodePen
+      </p>
+      {/* <h2>--dap</h2> */}
       <h3>Some things I've build</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt

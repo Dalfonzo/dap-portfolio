@@ -38,6 +38,15 @@ export const p = css`
   line-height: 1.6;
 `
 
+export const a = css`
+  font-size: ${fontSizes.normal};
+  text-decoration: none;
+
+  &:active {
+    color: inherit;
+  }
+`
+
 export const GlobalType = createGlobalStyle`
   body {
     ${body}
@@ -57,5 +66,9 @@ export const GlobalType = createGlobalStyle`
 
   h3 {
     ${h3}
+  }
+
+  a {
+    ${a}
   }
 `
