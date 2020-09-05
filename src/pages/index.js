@@ -4,8 +4,15 @@ import Layout from "../layout/Layout"
 const index = () => {
   return (
     <Layout>
-      <p style={{ fontSize: "4.8rem" }}>Hey, I’m David Pérez</p>
-      <p style={{ fontSize: "2rem" }}>asdasd</p>
+      <h1>Hey, I’m David Pérez</h1>
+      <h2>--dap</h2>
+      <h3>Some things I've build</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
+        consequatur laboriosam totam saepe sint dolore reiciendis obcaecati
+        deleniti delectus nihil perferendis voluptates blanditiis? Eos provident
+        esse nisi voluptatum dolor!
+      </p>
     </Layout>
   )
 }
