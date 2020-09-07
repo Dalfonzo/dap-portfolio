@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import * as S from "./styles"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -9,7 +10,11 @@ const Projects = () => {
           node {
             frontmatter {
               title
-              boobs
+              description
+              tags
+              repoLink
+              webLink
+              img
             }
           }
         }
@@ -17,13 +22,25 @@ const Projects = () => {
     }
   `)
 
-  console.log(data.allMarkdownRemark.edges)
-
   return (
     <div>
       <h3>Some things I've built</h3>
       {data.allMarkdownRemark.edges.map((edge, index) => (
-        <h3 key={index}>{edge.node.frontmatter.title}</h3>
+        <S.Container>
+          <S.leftSide>
+            <h3 key={index}>{edge.node.frontmatter.title}</h3>
+            <S.description>{edge.node.frontmatter.description}</S.description>
+            <S.tagContainer>
+              {edge.node.frontmatter.tags.map(tag => (
+                <S.tagItems>{tag}</S.tagItems>
+              ))}
+            </S.tagContainer>
+          </S.leftSide>
+          <S.rightSide>
+            <p>{edge.node.frontmatter.repoLink}</p>
+            <p>{edge.node.frontmatter.webLink}</p>
+          </S.rightSide>
+        </S.Container>
       ))}
     </div>
   )
