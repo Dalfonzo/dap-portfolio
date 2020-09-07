@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "../layout/Layout"
 import Intro from "../components/home/Home"
+import Projects from "../components/projects/Projects"
 
 const index = () => {
   return (
     <Layout>
       <Intro />
-      <h3>Some things I've build</h3>
+      <Projects />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
         consequatur laboriosam totam saepe sint dolore reiciendis obcaecati
