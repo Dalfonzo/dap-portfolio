@@ -7,7 +7,9 @@ export const green01 = "#73bd93"
 export const darkBlue = "#162129"
 export const darkBlue01 = "#111a20"
 export const white = "#ffffff"
-
+/*
+ * Colors variables
+ */
 export const background = "var(--background)"
 export const text = "var(--text)"
 export const contactBg = "var(--contactBg)"
