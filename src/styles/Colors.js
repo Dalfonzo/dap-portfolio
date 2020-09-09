@@ -1,25 +1,17 @@
-/**
- * Light Theme colors
- **/
-export const lightMode = {
-  background: "#ffffff",
-  text: "#000000",
-  highlight: "#1DA1F2",
-  contactBg: "#EEF9FF",
-  contactBorder: "#2F80ED",
-  resumeBg: "#EEFFF9",
-  resumeBorder: "#73BD93",
-}
+export const blue = "#1da1f2"
+export const blue01 = "#2f80ed"
+export const blue02 = "#eef9ff"
+export const black = "#000000"
+export const green = "#eefff9"
+export const green01 = "#73bd93"
+export const darkBlue = "#162129"
+export const darkBlue01 = "#111a20"
+export const white = "#ffffff"
 
-/**
- * Dark Theme colors
- **/
-export const darkMode = {
-  background: "#162129",
-  text: "#ffffff",
-  highlight: "#1DA1F2",
-  contactBg: "#111A20",
-  contactBorder: "#111A20",
-  resumeBg: "#111A20",
-  resumeBorder: "#111A20",
-}
+export const background = "var(--background)"
+export const text = "var(--text)"
+export const contactBg = "var(--contactBg)"
+export const contactBorder = "var(--contactBorder)"
+export const resumeBg = "var(--resumeBg)"
+export const resumeBorder = "var(--resumeBorder)"
+export const highlight = "var(--highlight)"

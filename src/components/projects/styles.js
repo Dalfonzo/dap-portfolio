@@ -25,7 +25,7 @@ export const tagContainer = styled.div`
 
 export const tagItems = styled.span`
   margin: 0.5rem;
-  color: ${Colors.lightHighlightColor};
+  color: ${Colors.highlight};
   font-size: ${fontSizes.normal};
   font-weight: ${fontWeights.bold};
 `

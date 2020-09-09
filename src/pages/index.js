@@ -8,7 +8,7 @@ const index = () => {
     <Layout>
       <Intro />
       <Projects />
-      <p>
+      <p style={{ color: "var(--resumeBorder)" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
         consequatur laboriosam totam saepe sint dolore reiciendis obcaecati
         deleniti delectus nihil perferendis voluptates blanditiis? Eos provident
