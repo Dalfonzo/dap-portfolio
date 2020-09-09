@@ -10,7 +10,7 @@ module.exports = {
     author: "David Pérez",
     github: "https://github.com/Dalfonzo",
     codepen: "",
-    email: "",
+    email: "dalfonzo18@gmail.com",
     linkedin: "",
   },
   plugins: [

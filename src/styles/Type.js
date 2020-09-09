@@ -16,6 +16,7 @@ export const fontSizes = {
 
 export const body = css`
   font-family: "Montserrat", "Arial";
+  font-size: ${fontSizes.normal};
 `
 
 export const h1 = css`
@@ -26,6 +27,7 @@ export const h1 = css`
 export const h2 = css`
   font-size: ${fontSizes.medium};
   font-weight: ${fontWeights.bold};
+  margin-bottom: 2rem;
 `
 
 export const h3 = css`

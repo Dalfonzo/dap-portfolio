@@ -2,11 +2,13 @@ import React from "react"
 import Layout from "../layout/Layout"
 import Header from "../components/header/Header"
 import Projects from "../components/projects/Projects"
+import About from "../components/about/About"
 
 const index = () => {
   return (
     <Layout>
       <Header />
+      <About />
       <Projects />
       <p style={{ color: "var(--resumeBorder)" }}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
