@@ -1,21 +1,25 @@
 /**
  * Light Theme colors
  **/
-export const blueColor = "#1DA1F2"
-export const fucsiaColor = "#EA4C89"
-
-/**
- * Light Theme colors
- **/
-export const lightBackground = "#ffffff"
-export const lightPrimaryColor = "#000000"
-export const lightSecondaryColor = "#718096"
-export const lightHighlightColor = "#3300FF"
+export const lightMode = {
+  background: "#ffffff",
+  text: "#000000",
+  highlight: "#1DA1F2",
+  contactBg: "#EEF9FF",
+  contactBorder: "#2F80ED",
+  resumeBg: "#EEFFF9",
+  resumeBorder: "#73BD93",
+}
 
 /**
  * Dark Theme colors
  **/
-export const darkBackground = "#162129"
-export const darkPrimaryColor = "#ffffff"
-export const darkSecondaryColor = "#DFE9ED"
-export const darkHighlighttColor = "#64FFDA"
+export const darkMode = {
+  background: "#162129",
+  text: "#ffffff",
+  highlight: "#1DA1F2",
+  contactBg: "#111A20",
+  contactBorder: "#111A20",
+  resumeBg: "#111A20",
+  resumeBorder: "#111A20",
+}
