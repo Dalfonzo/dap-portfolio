@@ -7,9 +7,17 @@
 module.exports = {
   siteMetadata: {
     title: "--dap",
-    author: "David Perez",
+    author: "David Pérez",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
     },
