@@ -1,5 +1,5 @@
 ---
-title: "The Great Gatsby Bootcamp"
+title: "IDBM Clone"
 description:
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
   consequatur laboriosam totam saepe sint dolore reiciendis obcaecati
@@ -8,5 +8,5 @@ description:
 tags: ["Javascript", "Firebase", "Sass", "Graphql", "React"]
 repoLink: "https://www.google.com/"
 webLink: "https://www.google.com/"
-img: ""
+img: ../../assets/images/12.png
 ---

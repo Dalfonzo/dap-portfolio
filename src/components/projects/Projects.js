@@ -37,6 +37,7 @@ const Projects = () => {
             </S.tagContainer>
           </S.leftSide>
           <S.rightSide>
+            {edge.node.html}
             <p>{edge.node.frontmatter.repoLink}</p>
             <p>{edge.node.frontmatter.webLink}</p>
           </S.rightSide>

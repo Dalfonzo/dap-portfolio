@@ -6,6 +6,7 @@ export const Container = styled.article`
   display: flex;
   flex-wrap: wrap;
 `
+
 export const leftSide = styled.div`
   border: 1px solid red;
   flex: 1 1 50%;
@@ -21,12 +22,15 @@ export const tagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
+
 export const tagItems = styled.span`
   margin: 0.5rem;
   color: ${Colors.lightHighlightColor};
   font-size: ${fontSizes.normal};
   font-weight: ${fontWeights.bold};
 `
+
 export const description = styled.p`
   color: ${Colors.lightSecondaryColor};
+  margin: 1rem 2rem 1rem 0;
 `
