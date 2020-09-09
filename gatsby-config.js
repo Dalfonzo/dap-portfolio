@@ -8,6 +8,10 @@ module.exports = {
   siteMetadata: {
     title: "--dap",
     author: "David Pérez",
+    github: "https://github.com/Dalfonzo",
+    codepen: "",
+    email: "",
+    linkedin: "",
   },
   plugins: [
     {
