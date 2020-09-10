@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components"
+import { Colors } from "./index"
 import Github from "../../icons/github.svg"
 import Linkedin from "../../icons/linkedin.svg"
 import Codepen from "../../icons/codepen.svg"
@@ -7,6 +8,7 @@ import External from "../../icons/external.svg"
 const properties = css`
   width: 100%;
   height: 100%;
+  fill: ${Colors.text};
 `
 
 export const github = styled(Github)`

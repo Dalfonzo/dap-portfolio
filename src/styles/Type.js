@@ -1,4 +1,5 @@
 import { css, createGlobalStyle } from "styled-components"
+import { Colors } from "./index"
 
 export const fontWeights = {
   light: 300,
@@ -18,6 +19,8 @@ export const fontSizes = {
 export const body = css`
   font-family: "Montserrat", "Arial";
   font-size: ${fontSizes.normal};
+  background-color: ${Colors.background};
+  color: ${Colors.text};
 `
 
 export const h1 = css`
