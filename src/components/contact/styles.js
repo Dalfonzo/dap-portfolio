@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Colors } from "../../styles"
+import { Colors, fontWeights } from "../../styles"
 
 export const container = styled.section`
   margin: 4rem 0;
@@ -11,8 +11,9 @@ export const container = styled.section`
 `
 
 export const styledLink = styled.a`
-  color: ${Colors.highlight};
-  border-bottom: 1px solid ${Colors.highlight};
+  color: ${Colors.text};
+  font-weight: ${fontWeights.bold};
+  border-bottom: 2px solid ${Colors.text};
   padding: 0.5rem 0;
   margin: 0 0.5rem;
 `
