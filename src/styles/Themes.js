@@ -10,9 +10,9 @@ export const Themes = css`
     --background: ${C.darkBlue};
     --text: ${C.white};
     --contactBg: ${C.darkBlue01};
-    --contactBorder: ${C.darkBlue01};
+    --contactBorder: ${C.white};
     --resumeBg: ${C.darkBlue01};
-    --resumeBorder: ${C.darkBlue01};
+    --resumeBorder: ${C.white};
   }
 
   .lightMode {

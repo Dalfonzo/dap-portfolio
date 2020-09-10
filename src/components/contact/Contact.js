@@ -4,7 +4,8 @@ import * as S from "./styles"
 const Contact = () => {
   return (
     <S.container>
-      <h2>Contact</h2>
+      <S.title>Contact</S.title>
+      {/* <h2>Contact</h2> */}
       <p>
         I’m currently looking for new oportunitys and exciting projects. so, If
         you have something in mind and want me to work with you or your team,

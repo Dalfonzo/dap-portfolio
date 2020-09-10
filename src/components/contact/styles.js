@@ -1,8 +1,12 @@
 import styled from "styled-components"
 import { Colors, fontWeights } from "../../styles"
 
+export const title = styled.h2`
+  color: ${Colors.contactBorder};
+`
+
 export const container = styled.section`
-  margin: 4rem 0;
+  margin: 2rem 0;
   width: 100%;
   border: 1px solid ${Colors.contactBorder};
   background-color: ${Colors.contactBg};
