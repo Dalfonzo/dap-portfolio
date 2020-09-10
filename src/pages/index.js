@@ -4,6 +4,7 @@ import Header from "../components/header/Header"
 import Projects from "../components/projects/Projects"
 import About from "../components/about/About"
 import Contact from "../components/contact/Contact"
+import Resume from "../components/resume/Resume"
 
 const index = () => {
   return (
@@ -12,6 +13,7 @@ const index = () => {
       <About />
       <Projects />
       <Contact />
+      <Resume />
     </Layout>
   )
 }
