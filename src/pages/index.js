@@ -3,6 +3,7 @@ import Layout from "../layout/Layout"
 import Header from "../components/header/Header"
 import Projects from "../components/projects/Projects"
 import About from "../components/about/About"
+import Contact from "../components/contact/Contact"
 
 const index = () => {
   return (
@@ -10,12 +11,7 @@ const index = () => {
       <Header />
       <About />
       <Projects />
-      <p style={{ color: "var(--resumeBorder)" }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, sunt
-        consequatur laboriosam totam saepe sint dolore reiciendis obcaecati
-        deleniti delectus nihil perferendis voluptates blanditiis? Eos provident
-        esse nisi voluptatum dolor!
-      </p>
+      <Contact />
     </Layout>
   )
 }
