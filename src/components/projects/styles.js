@@ -1,8 +1,12 @@
 import styled from "styled-components"
 import { Colors, fontSizes } from "../../styles"
 
+export const container = styled.section`
+  margin: 4rem 0;
+`
+
 export const cardContainer = styled.article`
-  margin: 2rem 0;
+  margin: 3rem 0;
   display: flex;
   flex-wrap: wrap;
 `

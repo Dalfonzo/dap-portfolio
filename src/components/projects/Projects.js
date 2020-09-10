@@ -24,7 +24,7 @@ const Projects = () => {
   `)
 
   return (
-    <div>
+    <S.container>
       <h2>Some things I've built</h2>
       {data.allMarkdownRemark.edges.map((edge, index) => (
         <S.cardContainer>
@@ -45,7 +45,7 @@ const Projects = () => {
           </S.iconsContainer>
         </S.cardContainer>
       ))}
-    </div>
+    </S.container>
   )
 }
 
