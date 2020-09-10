@@ -10,7 +10,8 @@ export const fontWeights = {
 export const fontSizes = {
   small: "1.2rem",
   normal: "1.5rem",
-  medium: "3rem",
+  medium: "2rem",
+  xmedium: "3rem",
   big: "4rem",
 }
 
@@ -25,13 +26,13 @@ export const h1 = css`
 `
 
 export const h2 = css`
-  font-size: ${fontSizes.medium};
+  font-size: ${fontSizes.xmedium};
   font-weight: ${fontWeights.bold};
   margin-bottom: 2rem;
 `
 
 export const h3 = css`
-  font-size: ${fontSizes.normal};
+  font-size: ${fontSizes.medium};
   font-weight: ${fontWeights.bold};
 `
 

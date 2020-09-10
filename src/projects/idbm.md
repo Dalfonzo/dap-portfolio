@@ -8,5 +8,4 @@ description:
 tags: ["Javascript", "Firebase", "Sass", "Graphql", "React"]
 repoLink: "https://www.google.com/"
 webLink: "https://www.google.com/"
-img: ../../assets/images/12.png
 ---

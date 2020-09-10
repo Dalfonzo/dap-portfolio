@@ -1,4 +1,5 @@
 import React from "react"
+import { Icons } from "../../styles"
 import { graphql, useStaticQuery } from "gatsby"
 
 import * as S from "./styles"
@@ -17,18 +18,18 @@ const IconLinks = () => {
     }
   `)
 
-  const { github, codepen, email, linkedin } = data.site.siteMetadata
+  const { github, codepen, linkedin } = data.site.siteMetadata
 
   return (
     <div>
       <S.link target="blank" href={github}>
-        <S.github />
+        <Icons.github />
       </S.link>
       <S.link target="blank" href={linkedin}>
-        <S.linkedin />
+        <Icons.linkedin />
       </S.link>
       <S.link target="blank" href={codepen}>
-        <S.codepen />
+        <Icons.codepen />
       </S.link>
     </div>
   )

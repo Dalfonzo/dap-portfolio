@@ -1,5 +1,7 @@
 import React from "react"
+import { Icons } from "../../styles"
 import { graphql, useStaticQuery } from "gatsby"
+
 import * as S from "./styles"
 
 const Projects = () => {
@@ -14,7 +16,6 @@ const Projects = () => {
               tags
               repoLink
               webLink
-              img
             }
           }
         }
@@ -24,24 +25,25 @@ const Projects = () => {
 
   return (
     <div>
-      <h3>Some things I've built</h3>
+      <h2>Some things I've built</h2>
       {data.allMarkdownRemark.edges.map((edge, index) => (
-        <S.Container>
-          <S.leftSide>
-            <h3 key={index}>{edge.node.frontmatter.title}</h3>
-            <S.description>{edge.node.frontmatter.description}</S.description>
-            <S.tagContainer>
-              {edge.node.frontmatter.tags.map(tag => (
-                <S.tagItems>{tag}</S.tagItems>
-              ))}
-            </S.tagContainer>
-          </S.leftSide>
-          <S.rightSide>
-            {edge.node.html}
-            <p>{edge.node.frontmatter.repoLink}</p>
-            <p>{edge.node.frontmatter.webLink}</p>
-          </S.rightSide>
-        </S.Container>
+        <S.cardContainer>
+          <h3 key={index}>{edge.node.frontmatter.title}</h3>
+          <S.description>{edge.node.frontmatter.description}</S.description>
+          <S.tagContainer>
+            {edge.node.frontmatter.tags.map(tag => (
+              <S.tagItems>{tag}</S.tagItems>
+            ))}
+          </S.tagContainer>
+          <S.iconsContainer>
+            <S.link href={edge.node.frontmatter.repoLink}>
+              <Icons.github />
+            </S.link>
+            <S.link href={edge.node.frontmatter.webLink}>
+              <Icons.external />
+            </S.link>
+          </S.iconsContainer>
+        </S.cardContainer>
       ))}
     </div>
   )
