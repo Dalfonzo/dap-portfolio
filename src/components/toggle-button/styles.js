@@ -4,7 +4,7 @@ import { Colors } from "../../styles"
 export const container = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin: 1rem 0;
+  margin: 2rem 0 3rem 0;
 `
 
 export const button = styled.div`

@@ -8,6 +8,7 @@ const properties = css`
 
 export const Wrapper = styled.div`
   max-width: ${Sizes.maxWidth};
+  min-width: ${Sizes.minWidth};
   ${properties}
 `
 export const Container = styled.div`

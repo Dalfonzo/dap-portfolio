@@ -12,6 +12,10 @@ export const container = styled.section`
   background-color: ${Colors.contactBg};
   padding: 4rem;
   border-radius: 5px;
+
+  @media only screen and (max-width: 400px) {
+    padding: 3rem 2rem;
+  }
 `
 
 export const styledLink = styled.a`

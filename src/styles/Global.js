@@ -20,4 +20,15 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
   }
+
+  @media only screen and (max-width: 400px) {
+    html {
+      font-size: 55.5%;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    html {
+      font-size: 53.5%;
+    }
+  }
 `

@@ -9,11 +9,9 @@ const Contact = () => {
       <p>
         I’m currently looking for new oportunitys and exciting projects. so, If
         you have something in mind and want me to work with you or your team,
-        leave a message to
-        <S.styledLink href="mailto:dalfonzo18@gmail.com">
-          dalfonzo18@gmail.com
-        </S.styledLink>
-        and I’ll get back to you.
+        leave a message
+        <S.styledLink href="mailto:dalfonzo18@gmail.com">here</S.styledLink> and
+        I’ll get back to you.
       </p>
     </S.container>
   )
