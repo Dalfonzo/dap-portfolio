@@ -4,6 +4,8 @@ import Github from "../../icons/github.svg"
 import Linkedin from "../../icons/linkedin.svg"
 import Codepen from "../../icons/codepen.svg"
 import External from "../../icons/external.svg"
+import Moon from "../../icons/moon.svg"
+import Sun from "../../icons/sun.svg"
 
 const properties = css`
   width: 100%;
@@ -24,5 +26,12 @@ export const codepen = styled(Codepen)`
 `
 
 export const external = styled(External)`
+  ${properties}
+`
+
+export const moon = styled(Moon)`
+  ${properties}
+`
+export const sun = styled(Sun)`
   ${properties}
 `

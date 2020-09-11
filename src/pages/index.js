@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../layout/Layout"
+import ToogleButton from "../components/toggle-button/ToggleButton"
 import Header from "../components/header/Header"
 import Projects from "../components/projects/Projects"
 import About from "../components/about/About"
@@ -8,11 +9,9 @@ import Resume from "../components/resume/Resume"
 import Footer from "../components/footer/Footer"
 
 const index = () => {
-  let element = document.body
-  element.classList.add("lightMode")
-
   return (
     <Layout>
+      <ToogleButton />
       <Header />
       <About />
       <Projects />
