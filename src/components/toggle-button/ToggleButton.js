@@ -3,15 +3,22 @@ import { Icons } from "../../styles"
 import * as S from "./styles"
 
 const ToggleButton = () => {
-  const [lightMode, setLightMode] = useState(true)
+  const [lightMode, setLightMode] = useState(
+    localStorage.getItem("themeMode") === "true"
+  )
 
   useEffect(() => {
-    let element = document.body
-    element.classList.add("lightMode")
+    localStorage.setItem("themeMode", lightMode)
+  }, [lightMode])
+
+  useEffect(() => {
+    const element = document.body
+    element.classList.add(lightMode ? "lightMode" : "darkMode")
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const toggleTheme = () => {
-    let element = document.body
+    const element = document.body
     element.className = lightMode ? "darkMode" : "lightMode"
     setLightMode(!lightMode)
   }
