@@ -27,12 +27,12 @@ const Projects = () => {
     <S.container>
       <h2>Some things I've built</h2>
       {data.allMarkdownRemark.edges.map((edge, index) => (
-        <S.cardContainer>
-          <h3 key={index}>{edge.node.frontmatter.title}</h3>
+        <S.cardContainer key={index}>
+          <h3>{edge.node.frontmatter.title}</h3>
           <S.description>{edge.node.frontmatter.description}</S.description>
           <S.tagContainer>
-            {edge.node.frontmatter.tags.map(tag => (
-              <S.tagItems>{tag}</S.tagItems>
+            {edge.node.frontmatter.tags.map((tag, i) => (
+              <S.tagItems key={i}>{tag}</S.tagItems>
             ))}
           </S.tagContainer>
           <S.iconsContainer>
