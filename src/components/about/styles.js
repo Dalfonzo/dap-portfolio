@@ -8,3 +8,6 @@ export const styledSpan = styled.span`
   color: ${Colors.highlight};
   margin: 0 0.5rem;
 `
+export const styledSection = styled.section`
+
+`

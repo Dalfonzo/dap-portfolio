@@ -7,7 +7,7 @@ const Footer = () => {
     <S.container>
       <Icons />
       <S.p>coded and designed by David Pérez</S.p>
-      <S.p>&copy; 2020</S.p>
+      <S.p>&copy; 2021</S.p>
     </S.container>
   )
 }
