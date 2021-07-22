@@ -8,13 +8,13 @@ const About = () => {
       <S2.container>
         <S2.title>Important Note!</S2.title>
         <p>
-          This site is under construction. As soon as I have time to finish it,
+          This site is under construction. As soon as I find time to finish it,
           I will! But thank you for passing by :)
         </p>
       </S2.container>
       <h2>About</h2>
       <p>
-        I’m a informatic engineering student living in Caracas, VE and I enjoy
+        I’m an informatic engineering student living in Caracas, VE and I enjoy
         building stuffs whether that be websites, applications, or anything in
         between with a main focus on front end development.
         <br />
