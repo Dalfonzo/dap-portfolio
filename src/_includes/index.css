@@ -1,7 +1,7 @@
 /* Colors */
 :root {
   --background: #0d0d11;
-  --primary: #66ff79;
+  --primary: rgb(54, 249, 246);
   --secondary: #ffff;
   --tertiary: #c3c7cb;
 }
