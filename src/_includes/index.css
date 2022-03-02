@@ -103,6 +103,12 @@ code {
 
 a {
   color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 h2,
@@ -169,6 +175,7 @@ textarea {
   border: 4px solid var(--primary);
   background: var(--background);
   color: var(--primary);
+  text-decoration: none;
 }
 
 .button:focus {
@@ -434,12 +441,13 @@ textarea {
 
 /* Blog */
 
-.blog {
+.blog__link {
+  color: var(--tertiary);
 }
 
+.blog__link:hover,
 .blog__link {
   text-decoration: none;
-  color: var(--tertiary);
 }
 
 .blog__title {
