@@ -60,7 +60,6 @@ body {
   src: url("/static/fonts/Rubik-Bold.woff2") format("woff2"),
     url("/static/fonts/Rubik-Bold.woff") format("woff");
   font-weight: bold;
-  font-display: swap;
 }
 
 @font-face {
@@ -69,7 +68,6 @@ body {
     url("/static/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 
 /* Typography */
