@@ -1,7 +1,7 @@
 /* Colors */
 :root {
   --background: #0d0d11;
-  --primary: #64ffda;
+  --primary: #66ff79;
   --secondary: #ffff;
   --tertiary: #c3c7cb;
 }
@@ -218,6 +218,7 @@ textarea {
 .header {
   display: flex;
   align-items: center;
+  padding: 1.5rem;
 }
 
 .header__home {
@@ -226,7 +227,7 @@ textarea {
 
 .header__link {
   text-decoration: none;
-  padding: 0 2rem;
+  padding: 0 1rem;
   font-weight: bold;
 }
 
