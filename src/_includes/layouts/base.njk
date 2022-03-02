@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+
+    {% set css %}
+    {% include "index.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+
+    <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Montserrat-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Rubik-Bold.woff2" crossorigin>
+  </head>
+  <body>
+    <header class='header container'>
+      <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;dap</a>
+
+      <nav class="header__nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <a  class="header__link normal-text normal-text--primary" href="{{ entry.url | url }}">{{ entry.title }}</a>
+        {%- endfor %}
+      </nav>
+      <p class='header__menu-icon' id='menu'>
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='menu-icon' style='display:block;'><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/></svg>
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='close-icon' style='display:none;'><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+      </p>
+    </header>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
+
+    <footer class='footer'>
+      {%- include "rss.njk" -%}
+    </footer>
+  </body>
+
+  {% block js %}
+    <script>
+      const header = document.querySelector('.header')
+      const navigation = document.querySelector('.header__nav')
+      const body = document.querySelector('body')
+      const menu = document.querySelector('#menu');
+      const menuIcon = document.querySelector('#menu-icon');
+      const closeMenuIcon = document.querySelector('#close-icon');
+      const headerLink = document.querySelector('.header__link')
+      let isOpen = false;
+
+      function toggleDisplay(selector) {
+        if (selector === "none" || selector === "") {
+          return "block";
+        } else {
+          return "none";
+        }
+      }
+
+      function toggleClasses() {
+        header
+          .classList
+          .toggle("open-menu");
+        navigation
+          .classList
+          .toggle("vertical-menu");
+        body
+          .classList
+          .toggle("no-vertical-overflow");
+
+        menuIcon.style.display = toggleDisplay(menuIcon.style.display)
+        closeMenuIcon.style.display = toggleDisplay(closeMenuIcon.style.display)
+      }
+
+      function displayWindowSize() {
+        const w = document.documentElement.clientWidth;
+        const h = document.documentElement.clientHeight;
+        if (w >= 600 && isOpen) {
+          toggleClasses()
+          isOpen = false
+        }
+      }
+
+      window.addEventListener("resize", displayWindowSize);
+
+      document
+        .querySelectorAll('.header__link')
+        .forEach(el => el.addEventListener('click', () => {
+          if (isOpen) {
+            isOpen = !isOpen;
+            toggleClasses()
+          }
+        }))
+
+      menu.addEventListener('click', () => {
+        isOpen = !isOpen;
+        toggleClasses()
+      });
+    </script>
+  {% endblock %}
+</html>

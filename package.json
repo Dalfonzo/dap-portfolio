@@ -1,0 +1,23 @@
+{
+  "name": "dap",
+  "version": "6.0.0",
+  "description": "David Pérez -dap- portfolio",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve --port=3000"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^1.1.0",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.3",
+    "luxon": "^2.3.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-anchor": "^8.4.1"
+  },
+  "dependencies": {
+    "clean-css": "^5.2.4"
+  }
+}
