@@ -123,7 +123,7 @@ textarea {
 .container {
   max-width: 1000px;
   margin: auto;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
 }
 
 .large-text {
@@ -161,10 +161,14 @@ textarea {
   padding: 0.8rem 1.6rem;
   color: var(--background);
   font-weight: bold;
+  border: 4px solid;
 }
 
 .button:hover {
   cursor: pointer;
+  border: 4px solid var(--primary);
+  background: var(--background);
+  color: var(--primary);
 }
 
 .button:focus {
@@ -325,7 +329,7 @@ textarea {
 /* Work */
 
 .work__project-container {
-  padding: 1.6rem 0 2.4rem;
+  padding: 1.6rem 0 0.5rem;
 }
 
 .work__title,
