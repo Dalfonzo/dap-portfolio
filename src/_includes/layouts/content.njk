@@ -32,7 +32,7 @@ templateClass: tmpl-project
 
         </section>
         <section class='navigation'>
-          {%if content_type == project%}
+          {%if content_type == 'project'%}
             {% set contentToDisplay = collections.projects%}
             {%else%}
             {% set contentToDisplay = collections.posts%}
