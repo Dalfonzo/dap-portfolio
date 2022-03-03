@@ -1,10 +1,10 @@
 /* Colors */
 :root {
   --background: #121417;
-  --primary: #64ffda;
-  --secondary: #ffe742;
+  --primary: #ffffff;
+  --secondary: #ffffff;
   --tertiary: #c3c7cb;
-  --links: #ea4c89;
+  --links: #ffffff;
 }
 /* Reset */
 
@@ -79,7 +79,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem; /*48*/
+  font-size: 3rem; /*48*/
   font-family: "Rubik";
 }
 
@@ -107,11 +107,10 @@ code {
 
 a {
   color: var(--links);
-  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 h2,
@@ -133,6 +132,10 @@ textarea {
   max-width: 1000px;
   margin: auto;
   padding: 0 1.5rem;
+}
+.xlarge-text {
+  font-size: 3rem; /*48*/
+  font-weight: bold;
 }
 
 .large-text {
@@ -181,10 +184,6 @@ textarea {
   text-decoration: none;
 }
 
-.button:focus {
-  outline: 4px solid var(--primary);
-}
-
 .button--link {
   text-decoration: none;
 }
@@ -229,7 +228,6 @@ textarea {
 }
 
 .header__link {
-  text-decoration: none;
   padding: 0 1rem;
   font-weight: bold;
 }
@@ -333,8 +331,8 @@ textarea {
 
 /* About */
 
-.about__text {
-  margin: 1.6rem 0 0;
+.about {
+  margin-top: 4rem;
 }
 
 /* Work */
@@ -374,6 +372,14 @@ textarea {
 .content__tags-element {
   padding: 0.4rem;
   color: var(--primary);
+  display: flex;
+  font-weight: bold;
+}
+
+.work__tags-element:before,
+.content__tags-element:before {
+  content: "#";
+  display: inline-block;
 }
 
 .work__tags-element:first-of-type,
@@ -434,7 +440,7 @@ textarea {
 }
 
 .contact__input:focus {
-  outline: 4px solid var(--primary);
+  outline: 4px solid var(--tertiary);
 }
 
 .contact__submit {

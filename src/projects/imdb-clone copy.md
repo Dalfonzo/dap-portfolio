@@ -2,10 +2,7 @@
 title: IMDB clone.
 description: A nicer look at your GitHub profile and re po stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.
 image: "/static/images/projects/imdb-clone/Screenshot_3.png"
-tags:
-  - Next.js
-  - Chart.js
-  - GitHub API
+tags: [Next.js, Chart.js, GitHub API]
 repository_url: "/asdasd"
 live_url: "/po"
 layout: layouts/content.njk
