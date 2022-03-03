@@ -215,6 +215,26 @@ textarea {
   height: auto;
 }
 
+.external-resources {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.external-resources a {
+  padding: 0.4rem;
+  margin: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.external-resources a svg {
+  margin-left: 0.4rem;
+  width: 1em;
+  height: auto;
+}
+
 /* Nav */
 
 .header {
@@ -393,26 +413,6 @@ textarea {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.work__external-resources {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.work__external-resources a {
-  padding: 0.4rem;
-  margin: 0.4rem;
-  display: flex;
-  align-items: center;
-}
-
-.work__external-resources a svg {
-  margin-left: 0.4rem;
-  width: 1em;
-  height: auto;
 }
 
 .work__button {
