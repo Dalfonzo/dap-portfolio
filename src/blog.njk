@@ -17,15 +17,15 @@ eleventyNavigation:
       {% set postslist = collections.posts %}
       <ul class="blog__list">
         {% for post in postslist | reverse %}
-          <a href="{{ post.url | url }}" class="blog__link">
-            <li class="blog__element">
+          <li class="blog__element">
+            <a href="{{ post.url | url }}" class="blog__link">
               <h3 class='highlight--primary blog__title'>{{ post.data.title }}</h3>
               <p>{{ post.data.description}}</p>
               <span class='blog__time'>
                 <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
               </span>
-            </li>
-          </a>
+            </a>
+          </li>
         {% endfor %}
       </ul>
     {%- endif -%}
