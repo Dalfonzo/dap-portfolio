@@ -453,6 +453,8 @@ textarea {
 
 .blog__link {
   color: var(--tertiary);
+  display: flex;
+  flex-direction: column;
 }
 
 .blog__link:hover,
@@ -477,8 +479,6 @@ textarea {
   border-radius: 10px;
   border: 2px solid var(--background);
   margin: 0.8rem 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .blog__element:hover {
