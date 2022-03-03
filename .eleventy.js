@@ -6,6 +6,8 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const CleanCSS = require("clean-css");
+const htmlmin = require("html-minifier");
+const { minify } = require("terser");
 
 module.exports = function (eleventyConfig) {
   /**
@@ -96,6 +98,36 @@ module.exports = function (eleventyConfig) {
     slugify: eleventyConfig.getFilter("slug"),
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
+
+  /**
+   * Transforms
+   */
+  eleventyConfig.addTransform("htmlmin", async function (content, output) {
+    if (output && output.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
+  });
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    "jsmin",
+    async function (code, callback) {
+      try {
+        const minified = await minify(code);
+        callback(null, minified.code);
+      } catch (err) {
+        console.error("Terser error: ", err);
+        // Fail gracefully.
+        callback(null, code);
+      }
+    }
+  );
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
