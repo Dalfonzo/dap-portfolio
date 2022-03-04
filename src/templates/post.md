@@ -7,3 +7,5 @@ tags:
 layout: layouts/content.njk
 content_type: blog
 ---
+
+<h2 class='vertical-margin'>some title</h2>
