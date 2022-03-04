@@ -10,8 +10,8 @@ permalink: /
   </p>
 </section>
 <section class='work container section-margin'>
-  <h2 id='work'>Some things I've built</h2>
-  <p class='about__text'>I have experience working in a wide range of technologies including <span class='highlight--primary'>React, Next, Eleventy, PostgreSQL and many others.</span> Below you can find a list of some of my side projects.
+  <h2 id='work' class='vertical-margin'>Some things I've built</h2>
+  <p class='about__text'>I have experience working in a wide range of technologies including <span class='highlight--primary'>React, Next, Eleventy, PostgreSQL and many others.</span> Below you can find a list with some of my side projects.
   </p>
   {%- if collections.projects.length == 0 -%}
     <p class='highlight--secondary'>Coming soon...</p>
@@ -33,9 +33,9 @@ permalink: /
         <div class='work__resources'>
           <a href="{{ project.url | url }}" class="button button--link work__button">View case study</a>
           <div class='external-resources'>
-            <a href="{{project.data.repository_url}}">Repository {%- include "external-link.njk" -%}
+            <a href="{{project.data.repository_url}}" target="_blank">Repository {%- include "external-link.njk" -%}
             </a>
-            <a href="{{project.data.live_url}}">Live demo {%- include "external-link.njk" -%}
+            <a href="{{project.data.live_url}}" target="_blank">Live demo {%- include "external-link.njk" -%}
             </a>
           </div>
         </div>
@@ -43,20 +43,4 @@ permalink: /
     {% endfor %}
   {%- endif -%}
 
-</section>
-
-<section class='contact container section-margin'>
-  <h2 id='contact'>Contact</h2>
-  <p>If you have something in mind and want me to work with you or your team, leave a message  and I'll get back to you!</p>
-
-  <form  method="POST" data-netlify="true" class='contact__form' name='contact-form'  netlify-honeypot="bot-field">
-    <label style='visibility: hidden; height:0;'>
-      Don’t fill this out if you’re human: <input name="bot-field"/>
-    </label>
-    <label class='contact__label highlight--secondary' for="email">Email</label>
-    <input class='contact__input' id="email" name="email" type="email" required/>
-    <label class='contact__label highlight--secondary' for="message">Message</label>
-    <textarea class='contact__input' id="message" name="message" rows="6" type="text" required autocomplete='false'></textarea>
-    <button type="submit" class='contact__submit button'>Send Message</button>
-  </form>
 </section>

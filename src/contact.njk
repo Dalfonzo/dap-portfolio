@@ -1,7 +1,33 @@
 ---
+permalink: /contact/
+layout: layouts/base.njk
 eleventyNavigation:
   key: Contact
   order: 4
-  url: /#contact
-permalink: false
 ---
+
+<section class='contact container section-margin'>
+  <h1 id='contact' class='vertical-margin'>Contact</h1>
+  <p>If you have something in mind and want me to work with you or your team, leave a message  and I'll get back to you!</p>
+  <form  method="POST" data-netlify="true" class='contact__form' name='contact-form'  netlify-honeypot="bot-field">
+    <label style='visibility: hidden; height:0;'>
+      Don’t fill this out if you’re human: <input name="bot-field"/>
+    </label>
+    <label class='contact__label highlight--secondary' for="text">Your Name *</label>
+    <input class='contact__input' id="text" name="text" type="text" required/>
+    <label class='contact__label highlight--secondary' for="email">Your Email *</label>
+    <input class='contact__input' id="email" name="email" type="email" required/>
+    <label class='contact__label highlight--secondary' for="message">Message *</label>
+    <textarea class='contact__input' id="message" name="message" rows="6" type="text" required autocomplete='false'></textarea>
+    <button type="submit" class='contact__submit button'>Send Message</button>
+  </form>
+  <p class="vertical-margin">You can also find me on any of these sites:</p>
+  <p>
+    <a href="{{ metadata.author.github }}" target="_blank">Github {%- include "external-link.njk" -%}
+    </a>
+  </p>
+  <p>
+    <a href="{{ metadata.author.linkedin }}" target="_blank">Linkedin {%- include "external-link.njk" -%}
+    </a>
+  </p>
+</section>

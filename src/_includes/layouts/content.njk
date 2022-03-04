@@ -4,12 +4,12 @@ templateClass: tmpl-project
 ---
 <div class='container'>
   <section class='body'>
-    <h1 class="content__title">{{ title }}</h1>
+    <h1 class="content__title vertical-margin">{{ title }}</h1>
     {%if content_type == 'project'%}
       <div class='external-resources'>
-        <a href="{{repository_url}}">Repository {%- include "external-link.njk" -%}
+        <a href="{{repository_url}}" target="_blank">Repository {%- include "external-link.njk" -%}
         </a>
-        <a href="{{live_url}}">Live demo {%- include "external-link.njk" -%}
+        <a href="{{live_url}}" target="_blank">Live demo {%- include "external-link.njk" -%}
         </a>
       </div>
       {%-endif-%}
