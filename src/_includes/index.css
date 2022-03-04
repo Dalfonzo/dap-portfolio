@@ -151,6 +151,7 @@ textarea {
 .normal-text--primary,
 .highlight--primary {
   color: var(--primary);
+  font-weight: bold;
 }
 
 .large-text--secondary,
