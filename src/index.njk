@@ -14,7 +14,7 @@ permalink: /
   <p class='about__text'>I have experience working in a wide range of technologies including <span class='highlight--primary'>React, Next, Eleventy, PostgreSQL and many others.</span> Below you can find a list with some of my side projects.
   </p>
   {%- if collections.projects.length == 0 -%}
-    <p class='highlight--secondary'>Coming soon...</p>
+    <p class='highlight--secondary vertical-margin' style='font-weight:bold;'>Coming soon...</p>
   {%- else -%}
     {% for project in collections.projects %}
       <div class='work__project-container'>

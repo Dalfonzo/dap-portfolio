@@ -12,7 +12,7 @@ eleventyNavigation:
   </p>
   <div class='vertical-margin'>
     {%- if collections.posts.length == 0 -%}
-      <p class='highlight--secondary'>Coming soon...</p>
+      <p class='highlight--secondary vertical-margin' style='font-weight:bold;'>Coming soon...</p>
     {%- else -%}
       {% set postslist = collections.posts %}
       <ul class="blog__list">

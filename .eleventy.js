@@ -83,6 +83,14 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  eleventyConfig.addCollection("posts", function (collection) {
+    return collection.getFilteredByGlob("src/posts/*.md");
+  });
+
+  eleventyConfig.addCollection("projects", function (collection) {
+    return collection.getFilteredByGlob("src/projects/*.md");
+  });
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
