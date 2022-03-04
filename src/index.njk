@@ -18,7 +18,7 @@ permalink: /
   {%- else -%}
     {% for project in collections.projects %}
       <div class='work__project-container'>
-        <a href="{{ project.url | url }}">
+        <a href="{{ project.url | url }}" style='display:inline-block;'>
           <h3 class="highlight--secondary work__title">{{ project.data.title }}</h3>
         </a>
         <img class="work__hero" src="{{ project.data.image }}" alt="{{ project.data.title }}" height="500" width="1000"/>
