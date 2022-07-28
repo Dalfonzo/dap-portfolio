@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
    * COPY
    */
   eleventyConfig.addPassthroughCopy("src/static");
+  eleventyConfig.addWatchTarget("src/static");
 
   /**
    * FILTERS
