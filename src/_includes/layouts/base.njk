@@ -10,49 +10,42 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
     {% set css %}
     {% include '../../static/css/global.css' %}
     {% include '../../static/css/resets.css' %}
     {% include '../../static/css/variables.css' %}
     {% endset %}
-
-    <style>
-      {{css | cssmin | safe}}
-    </style>
-
+    <style>{{css | cssmin | safe}}</style>
+    <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Montserrat-Bold.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Montserrat-Medium.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Montserrat-Regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Rubik-Bold.woff2" crossorigin>
   </head>
   <body>
-    <header class='header container'>
-      <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;</a>
+    {# <header class='header container'>
+    <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;</a>
 
-      <nav class="header__nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <a  class="header__link normal-text normal-text--primary" href="{{ entry.url | url }}">{{ entry.title }}</a>
-        {%- endfor %}
-      </nav>
-      <p class='header__menu-icon' id='menu'>
-        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='menu-icon' style='display:block;'><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/></svg>
-        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='close-icon' style='display:none;'><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
-      </p>
-    </header>
-
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <nav class="header__nav">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <a  class="header__link normal-text normal-text--primary" href="{{ entry.url | url }}">{{ entry.title }}</a>
+      {%- endfor %}
+    </nav>
+    <p class='header__menu-icon' id='menu'>
+      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='menu-icon' style='display:block;'><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/></svg>
+      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px" id='close-icon' style='display:none;'><path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"/></svg>
+    </p>
+  </header> #}
+    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
       {{ content | safe }}
     </main>
-
-    <footer class='footer'>
+    <footer class='footer full-screen'>
       {%- include "rss.njk" -%}
     </footer>
   </body>
-
   {% set js %}
   {% include "../../static/js/menu.js" %}
   {% endset %}
-
-  <script>
-    {{ js | jsmin | safe }}
-  </script>
+  <script>{{ js | jsmin | safe }}</script>
 </html>

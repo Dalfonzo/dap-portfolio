@@ -2,58 +2,56 @@
 layout: layouts/base.njk
 templateClass: tmpl-project
 ---
+
 <div class='container'>
   <section class='body'>
     <h1 class="content__title vertical-margin">{{ title }}</h1>
-    {%if content_type == 'project'%}
+    {% if content_type == 'project' %}
       <div class='external-resources'>
-        <a href="{{repository_url}}" target="_blank">Repository {%- include "external-link.njk" -%}
+        <a href="{{ repository_url }}" target="_blank">Repository {%- include "external-link.njk" -%}
         </a>
-        <a href="{{live_url}}" target="_blank">Live demo {%- include "external-link.njk" -%}
+        <a href="{{ live_url }}" target="_blank">Live demo {%- include "external-link.njk" -%}
         </a>
       </div>
-      {%-endif-%}
-
-      {%if image%}
-        <img src="{{image}}" class='content__hero' alt="{{title}}" height="500" width="1000"/>
-        {%endif%}
-
-        {%if tags%}
-          <ul class='content__tags-list'>
-            {% for tag in tags | filterTagList %}
-              <li class='content__tags-element '>
-                <p>{{ tag }}</p>
+    {%- endif -%}
+    {% if image %}
+      <img src="{{ image }}" class='content__hero' alt="{{ title }}" height="500" width="1000"/>
+    {% endif %}
+    {% if tags %}
+      <ul class='content__tags-list'>
+        {% for tag in tags | filterTagList %}
+          <li class='content__tags-element '>
+            <p>{{ tag }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {{ content | safe }}
+  </section>
+  <section class='navigation'>
+    {% if content_type == 'project' %}
+      {% set contentToDisplay = collections.projects %}
+    {% else %}
+      {% set contentToDisplay = collections.posts %}
+    {% endif %}
+    {%- if contentToDisplay %}
+      {%- set next = contentToDisplay | getNextCollectionItem(page) %}
+      {%- set previous = contentToDisplay | getPreviousCollectionItem(page) %}
+      {%- if next or previous %}
+        <hr class="vertical-margin">
+          <ul class='navigation__list'>
+            {%- if previous %}
+              <li>Previous:
+                <a href="{{ previous.url | url }}">{{ previous.data.title }}</a>
               </li>
-            {% endfor %}
+            {% endif %}
+            {%- if next %}
+              <li class='navigation__next'>Next:
+                <a href="{{ next.url | url }}">{{ next.data.title }}</a>
+              </li>
+            {% endif %}
           </ul>
-          {%endif%}
-
-          {{ content | safe }}
-
-        </section>
-        <section class='navigation'>
-          {%if content_type == 'project'%}
-            {% set contentToDisplay = collections.projects%}
-            {%else%}
-            {% set contentToDisplay = collections.posts%}
-            {%endif%}
-
-            {%- if contentToDisplay %}
-              {%- set next = contentToDisplay | getNextCollectionItem(page) %}
-              {%- set previous = contentToDisplay | getPreviousCollectionItem(page) %}
-              {%- if next or previous %}
-                <hr class="vertical-margin">
-                <ul class='navigation__list'>
-                  {%- if previous %}
-                    <li>Previous: <a href="{{ previous.url | url }}">{{ previous.data.title }}</a>
-                    </li>
-                  {% endif %}
-                  {%- if next %}
-                    <li class='navigation__next'>Next: <a href="{{ next.url | url }}">{{ next.data.title }}</a>
-                    </li>
-                  {% endif %}
-                </ul>
-              {%- endif %}
-            {%- endif %}
-          </section>
-        </div>
+        {%- endif %}
+      {%- endif %}
+    </section>
+  </div>

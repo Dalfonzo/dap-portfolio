@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.hero_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.hero__title {
+  font-size: 8.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero__title:last-child {
+  text-align: right;
+}
+
+.hero_text {
+  font-weight: 500;
+  margin-left: 12vw;
+  font-size: 1.86vw;
+  text-transform: uppercase;
+}
