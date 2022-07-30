@@ -11,12 +11,26 @@ permalink: /
 <style>
   {{css | cssmin | safe}}</style>
 <section class="hero panel-vertical full-screen container">
-  <h1 class="hero__title">ENGINEER, <br/>DEVELOPER</h1>
+  <img src='./static/images/sculpture.png' height='200' width='150' class='hero__img parallax' value='3'></img>
+  <h1 class="hero__title parallax" value="0.5">ENGINEER, <br/>DEVELOPER</h1>
   <div class='hero_bottom'>
-    <p class="hero_text text">
+    <p class="hero_text text parallax" value='1'>
       JAVASCRIPT & <br/> WEB enthusiastic
     </p>
-    <h2 class="hero__title">
+    <svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg" class='hero__icon parallax' value='-1'>
+      <g clip-path="url(#clip0_812_733)">
+        <path
+          d="M100.625 56.9844L88.2525 44.5288L61.2325 71.5488L61.2325 -1.7219e-06L43.7675 -2.48532e-06L43.7675 71.5488L16.7475
+            44.5288L4.37501 56.9844L52.5 105L100.625 56.9844Z"
+          fill="white"/>
+      </g>
+      <defs>
+        <clipPath id="clip0_812_733">
+          <rect width="105" height="105" fill="white" transform="translate(105) rotate(90)"/>
+        </clipPath>
+      </defs>
+    </svg>
+    <h2 class="hero__title parallax" value="-0.5">
       DAVID <br/> PEREZ.
     </h2>
   </div>
@@ -52,9 +66,9 @@ permalink: /
         </div>
         <div>
           <img class='projects__image' src={{ project.data.image }} alt={{ project.data.title }} width='500' height='300'/>
-          <a href="{{ project.data.repository_url }}" target="_blank" class='projects__link'>Repository {%- include "external-link.njk" -%}
+          <a href="{{ project.data.repository_url }}" target="_blank" class='projects__link hover'>Repository {%- include "external-link.njk" -%}
           </a>
-          <a href="{{ project.data.live_url }}" target="_blank" class='projects__link'>Live demo {%- include "external-link.njk" -%}
+          <a href="{{ project.data.live_url }}" target="_blank" class='projects__link hover'>Live demo {%- include "external-link.njk" -%}
           </a>
         </div>
       </div>
