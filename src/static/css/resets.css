@@ -18,6 +18,7 @@ html {
   color: var(--light-text);
 }
 
-body {
+body,
+html {
   overflow-x: hidden;
 }
