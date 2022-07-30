@@ -15,7 +15,7 @@ html {
   box-sizing: border-box;
   font-family: "Montserrat";
   scroll-behavior: smooth;
-  color: var(--secondary);
+  color: var(--light-text);
 }
 
 body {

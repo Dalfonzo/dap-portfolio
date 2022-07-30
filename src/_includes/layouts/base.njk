@@ -24,6 +24,7 @@
     <link rel="preload" as="font" type="font/woff2" href="/static/fonts/Montserrat-Regular.woff2" crossorigin>
   </head>
   <body>
+    <p id='cursor'>scroll-to-discover-</p>
     {# <header class='header container'>
     <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;</a>
 
@@ -44,8 +45,16 @@
       {%- include "rss.njk" -%}
     </footer>
   </body>
-  {% set js %}
+  {% set menu %}
   {% include "../../static/js/menu.js" %}
   {% endset %}
-  <script>{{ js | jsmin | safe }}</script>
+  {% set cursor %}
+  {% include "../../static/js/cursor.js" %}
+  {% endset %}
+   {% set parallax %}
+  {% include "../../static/js/parallax.js" %}
+  {% endset %}
+  <script>{{ menu | jsmin | safe }}</script>
+  <script>{{ cursor | jsmin | safe }}</script>
+  <script>{{ parallax | jsmin | safe }}</script>
 </html>

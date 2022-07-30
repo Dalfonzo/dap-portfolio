@@ -1,6 +1,8 @@
 /* Colors */
 :root {
-  --primary: #ffffff;
-  --secondary: #000000;
-  --accent: #ffd400;
+  --primary: rgb(53, 66, 89);
+  --secondary: rgb(255, 250, 230);
+  --accent: #c2ded1;
+  --dark-text: rgb(23, 21, 21);
+  --light-text: #fff;
 }

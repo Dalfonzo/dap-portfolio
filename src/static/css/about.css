@@ -1,9 +1,8 @@
 .about {
   background: var(--secondary);
-  color: var(--primary);
+  color: var(--dark-text);
   height: 110vh;
   width: 100vw;
-  /* border-radius: 3vw; */
 }
 
 .about__text {

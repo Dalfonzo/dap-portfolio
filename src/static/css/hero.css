@@ -5,17 +5,18 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  background: var(--primary);
 }
 
 .hero_bottom {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
 }
 
 .hero__title {
-  font-size: 8.5vw;
+  font-size: 7.5vw;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -29,4 +30,17 @@
   margin-left: 12vw;
   font-size: 1.86vw;
   text-transform: uppercase;
+}
+
+.hero__icon {
+  align-self: flex-end;
+}
+
+.hero__img {
+  position: absolute;
+  right: 16vw;
+  top: 3vw;
+  width: 200px;
+  height: 250px;
+  transform: rotate(45deg);
 }

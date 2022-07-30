@@ -22,8 +22,38 @@
   font-style: normal;
 }
 
+/* Container */
+
 .container {
   padding: 0 3vw 3vw;
+}
+
+/* Cursor */
+#cursor {
+  position: absolute;
+  color: #c38888;
+  font-size: 1.5vw;
+  user-select: none;
+  pointer-events: none;
+  font-weight: bold;
+  animation: animate 7.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#cursor span {
+  position: absolute;
+  display: inline-block;
+  transform-origin: 0 100px;
+  text-transform: uppercase;
+  top: -100px;
 }
 
 /* Page panels */

@@ -5,6 +5,7 @@
 
 #panels-container {
   background: var(--accent);
+  color: var(--dark-text);
 }
 
 .projects__heading {
