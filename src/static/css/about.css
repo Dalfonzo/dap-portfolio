@@ -1,8 +1,6 @@
 .about {
   background: var(--secondary);
   color: var(--dark-text);
-  height: 110vh;
-  width: 100vw;
 }
 
 .about__text {
@@ -31,4 +29,31 @@
 
 .about__subtitle {
   padding: 4.25vw 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about__text--bold {
+    font-size: 20px;
+  }
+
+  .about__text:last-of-type {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about__text {
+    padding: 0 0 3rem 20vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about__text {
+    padding-left: 10vw;
+    font-size: 14px;
+  }
+
+  .about__text--bold {
+    font-size: 16px;
+  }
 }

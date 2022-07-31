@@ -60,9 +60,17 @@
 
 .full-screen {
   display: block;
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  max-height: calc(100vw / 1.3);
+}
+
+@media only screen and (max-width: 768px) {
+  .full-screen {
+    height: auto;
+    max-height: unset;
+  }
 }
 
 #panels-container {
@@ -108,6 +116,15 @@
   top: 50%;
   left: -15vw;
   transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+  .separator {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
 }
 
 /* Nav */

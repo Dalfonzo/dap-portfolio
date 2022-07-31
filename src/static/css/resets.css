@@ -16,7 +16,7 @@ html {
   font-family: "Montserrat";
   scroll-behavior: smooth;
   color: var(--light-text);
-  font-size: 1.06vw;
+  font-size: clamp(16px, 1.06vw, 1.06vw);
 }
 
 body,
