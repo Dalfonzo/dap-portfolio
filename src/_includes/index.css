@@ -25,9 +25,9 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 801px) {
   html {
-    font-size: 90%;
+    font-size: 85%;
   }
 }
 
@@ -353,14 +353,18 @@ textarea {
 
 /* About */
 
-.about {
-  margin-top: 4rem;
+#about {
+  margin: 4rem 0 2rem;
 }
 
 /* Work */
 
 .work__project-container {
-  padding: 1.6rem 0 0.5rem;
+  padding: 5rem 0 0.5rem;
+}
+
+.work__title {
+  text-transform: capitalize;
 }
 
 .work__title,
@@ -388,6 +392,7 @@ textarea {
   list-style: none;
   align-items: center;
   flex-wrap: wrap;
+  margin: 1rem 0;
 }
 
 .work__tags-element,
