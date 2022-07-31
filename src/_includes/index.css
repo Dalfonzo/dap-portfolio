@@ -129,10 +129,11 @@ textarea {
 
 /* Global styles */
 .container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   padding: 0 1.5rem;
 }
+
 .xlarge-text {
   font-size: 3rem; /*48*/
   font-weight: bold;
