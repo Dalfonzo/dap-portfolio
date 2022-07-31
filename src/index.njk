@@ -21,7 +21,7 @@ permalink: /
         <a href="{{ project.url | url }}" style='display:inline-block;'>
           <h3 class="highlight--secondary work__title">{{ project.data.title }}</h3>
         </a>
-        <img class="work__hero" src="{{ project.data.image }}" alt="{{ project.data.title }}" height="500" width="1000"/>
+        <img class="work__hero" src="{{ project.data.og }}" alt="{{ project.data.title }}" height="500" width="1000"/>
         <ul class='work__tags-list'>
           {% for tag in project.data.tags | filterTagList %}
             <li class='work__tags-element'>
