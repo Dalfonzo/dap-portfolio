@@ -377,6 +377,14 @@ textarea {
   margin: 1.6rem;
 }
 
+.work__hero {
+  filter: brightness(0.7);
+}
+
+.work__hero:hover {
+  filter: brightness(1);
+}
+
 .work__hero,
 .content__hero {
   height: auto;
