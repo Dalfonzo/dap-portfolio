@@ -19,4 +19,4 @@ layout: layouts/content.njk
 content_type: project
 ---
 
-<p>[WIP] - Coming soon...</p>
+<!-- <p>[WIP] - Coming soon...</p> -->
