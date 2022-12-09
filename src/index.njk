@@ -18,10 +18,13 @@ permalink: /
   {%- else -%}
     {% for project in collections.projects %}
       <div class='work__project-container'>
-        <a href="{{ project.url | url }}" style='display:inline-block;'>
-          <h3 class="highlight--secondary work__title">{{ project.data.title }}</h3>
+        <a href="{{ project.data.live_url }}" style='display:inline-block;'  target="_blank">
+          <h3 class="highlight--secondary work__title">{{ project.data.title }} </h3>
         </a>
+        <a href="{{ project.data.live_url }}"  target="_blank">
         <img class="work__hero" src="{{ project.data.og }}" alt="{{ project.data.title }}" height="500" width="1000"/>
+        </a>
+
         <ul class='work__tags-list'>
           {% for tag in project.data.tags | filterTagList %}
             <li class='work__tags-element'>
@@ -31,7 +34,7 @@ permalink: /
         </ul>
         <p>{{project.data.description}}</p>
         <div class='work__resources'>
-          <a href="{{ project.url | url }}" class="button button--link work__button">View case study</a>
+          {# <a href="{{ project.url | url }}" class="button button--link work__button">View case study</a> #}
           <div class='external-resources'>
             <a href="{{project.data.repository_url}}" target="_blank">Repository {%- include "external-link.njk" -%}
             </a>
