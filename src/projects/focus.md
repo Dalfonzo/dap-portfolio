@@ -5,7 +5,7 @@ image: "/static/images/projects/focus/focus.png"
 og: "/static/images/projects/focus/focus-og.png"
 tags: ["NextJs", "Tailwind CSS", "Redux Tool Kit", "Supabase"]
 repository_url: "https://github.com/Dalfonzo/focus"
-live_url: "https://focus.dap.codes/"
+live_url: "https://focus-opal.vercel.app/"
 layout: layouts/content.njk
 content_type: project
 ---
