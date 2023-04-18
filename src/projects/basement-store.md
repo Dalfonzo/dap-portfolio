@@ -14,7 +14,7 @@ tags:
     "Typescript",
   ]
 repository_url: "https://github.com/Dalfonzo/basement-store"
-live_url: "https://basement.dap.codes/"
+live_url: "https://basement-store-shop.vercel.app/"
 layout: layouts/content.njk
 content_type: project
 ---
