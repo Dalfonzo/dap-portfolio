@@ -5,7 +5,7 @@ image: "/static/images/projects/imdb-clone/imdb.png"
 og: "/static/images/projects/imdb-clone/imdb-og.png"
 tags: ["ReactJS", "Saas", "Axios"]
 repository_url: "https://github.com/Dalfonzo/imdb-clone"
-live_url: "https://imdb.dap.codes/"
+live_url: "https://imdb-ten.vercel.app/"
 layout: layouts/content.njk
 content_type: project
 ---
