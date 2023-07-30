@@ -4,27 +4,75 @@ permalink: /
 ---
 
 <section class='about container section-margin'>
-  <h1 id='about'>Hi, I'm David.</h1>
+  <h1 id='about'>Hi, I'm David</h1>
   <p class='about__text'>
-    I'm an informatic engineer who enjoys building stuff  whether that be websites, applications, or anything in between with a <span class='highlight--primary'>main focus on frontend development.</span>
+    I am an engineer with over two years of experience in building websites and applications. I have worked on both the frontend and backend sides of development, but my area of expertise lies primarily in frontend development.
   </p>
+  <br/> <br/>
+  <p class='about__text'>
+    <span class='highlight--primary'>Technologies and tools I have recently used</span>
+  </p>
+  <br/> <br/>
+  <p class='about__text'>
+   I have experience working with React, particularly with Next.js. Additionally, I have worked with other technologies such as Zustand, Mantine, Docker, Nest.js, PostgreSQL, and Sequelize.
+  </p>
+  <br/> <br/>
+  <p class='about__text'>
+    <span class='highlight--primary'>Technologies, languages and frameworks I would like to explore deeper in the near
+      future</span>
+  </p>
+  <br/> <br/>
+  <p class='about__text'>
+    React Native, Remix, Svelte, Rust, Go, Astro, Angular, Docker, Kubernetes, AWS.
+  </p>
+  <br/> <br/>
+   <p class='about__text'>
+    <span class='highlight--primary'>What should you expect working with me?</span>
+  </p>
+  <br/> <br/>
+  <p>I bring a variety of skills and qualities to the table, including:</p>
+  <br/>
+  <ul>
+    <li>An eye for detail</li>
+    <li>Being endlessly curious about new technologies and interesting problems</li>
+    <li>Clear communication to both technicall and non-technicall people</li>
+    <li>Always looking for ways to improve the current systems and provide suggestions whenever neccesary</li>
+  </ul>
+  <br/> <br/>
+  <p class='about__text'>
+    <span class='highlight--primary'>Latests OSS contributions</span>
+  </p>
+  <br/> <br/>
+  <p class='about__text'>
+    I've just started my journey into the OSS world but I'm looking forward to contribute more in the following months -as
+    soon as I get some free time and find interesting projects :)-.
+  </p>
+  <br/>
+  <p class='about__text'>
+    Below is the list of projects I've contributed to.
+  </p>
+  <br/> <br/>
+  <ul>
+    <li><a href="https://github.com/blenderskool/blaze" target="_blank">Blaze</a></li>
+  </ul>
 </section>
+<br/> <br/>
 <section class='work container section-margin'>
   <h2 id='work' class='vertical-margin'>Some things I've built</h2>
-  <p class='about__text'>I have experience working in a wide range of technologies including <span class='highlight--primary'>React, Next, Eleventy, PostgreSQL and many others.</span> Below you can find a list with some of my side projects.
-  </p>
+  <p class='about__text'>
+    Below you can find a list with some of my side projects.</p>
   {%- if collections.projects.length == 0 -%}
     <p class='highlight--secondary vertical-margin' style='font-weight:bold;'>Coming soon...</p>
   {%- else -%}
     {% for project in collections.projects %}
       <div class='work__project-container'>
-        <a href="{{ project.data.live_url }}" style='display:inline-block;'  target="_blank">
-          <h3 class="highlight--secondary work__title">{{ project.data.title }} </h3>
+        <a href="{{ project.data.live_url }}" style='display:inline-block;' target="_blank">
+          <h3 class="highlight--secondary work__title">{{ project.data.title }}
+          </h3>
         </a>
-        <a href="{{ project.data.live_url }}"  target="_blank">
-        <img class="work__hero" src="{{ project.data.og }}" alt="{{ project.data.title }}" height="500" width="1000"/>
+        <a href="{{ project.data.live_url }}" target="_blank">
+          <img class="work__hero" src="{{ project.data.og }}" alt="{{ project.data.title }}" height="500" width="1000"/>
         </a>
-
         <ul class='work__tags-list'>
           {% for tag in project.data.tags | filterTagList %}
             <li class='work__tags-element'>
@@ -32,18 +80,18 @@ permalink: /
             </li>
           {% endfor %}
         </ul>
-        <p>{{project.data.description}}</p>
-        <div class='work__resources'>
+        <p>{{ project.data.description }}</p>
+        <div
+          class='work__resources'>
           {# <a href="{{ project.url | url }}" class="button button--link work__button">View case study</a> #}
           <div class='external-resources'>
-            <a href="{{project.data.repository_url}}" target="_blank">Repository {%- include "external-link.njk" -%}
+            <a href="{{ project.data.repository_url }}" target="_blank">Repository {%- include "external-link.njk" -%}
             </a>
-            <a href="{{project.data.live_url}}" target="_blank">Live demo {%- include "external-link.njk" -%}
+            <a href="{{ project.data.live_url }}" target="_blank">Live demo {%- include "external-link.njk" -%}
             </a>
           </div>
         </div>
       </div>
     {% endfor %}
   {%- endif -%}
-
 </section>
