@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/drive-viewer/AITFw-xw5iTuCtFVPXSVUpbdFbTEeiL8c7KR7_-ciE2qCG_630RsXFFjSHthN3SyXfwdYMRqteIWDPZK27xhZGfpAEzlk5HL=s2560">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="640">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png">
