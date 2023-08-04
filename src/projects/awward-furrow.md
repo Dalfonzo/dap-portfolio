@@ -1,6 +1,6 @@
 ---
 title: Awwward Furrow
-description: The project is a rebuilt of an awwward's "site of the day" winning page. The idea behind this was to get a better understanding of the canvas and to make some awesome animations.
+description: The project is a rebuild of an awwward's "site of the day" winning page. The idea behind this was to get a better understanding of the canvas and to make some aesthetically pleasing animations.
 image: "/static/images/projects/furrow/furrow.png"
 og: "/static/images/projects/furrow/furrow-og.png"
 tags: ["NextJs", "Styled Components", "Typescript", "Framer Motion"]
