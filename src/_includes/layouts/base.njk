@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/drive-viewer/AITFw-yOLWb7tZ6Ubr-IoaEViUuQjU22eiyMM2zJ6VXXctMm1DSkJSM052ABfFyl7omcFXYmR3SEwHMJC3cV3p5f3p_BiDx7lA=s1600">
+    <meta property="og:image" content="dap-portfolio.vercel.app/og.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="768">
@@ -27,7 +27,7 @@
   </head>
   <body>
     <header class='header container'>
-      <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;dap</a>
+      <a href="{{ '/' | url }}" class="header__link  large-text large-text--secondary">&#126;&#47;dvprz</a>
 
       <nav class="header__nav">
         {%- for entry in collections.all | eleventyNavigation %}
