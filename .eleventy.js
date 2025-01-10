@@ -148,5 +148,10 @@ module.exports = function (eleventyConfig) {
       data: "_data",
       output: "_site",
     },
+    data: {
+      metadata: {
+        url: "https://dap-portfolio.vercel.app/",
+      },
+    },
   };
 };
